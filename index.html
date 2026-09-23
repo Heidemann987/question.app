@@ -64,7 +64,7 @@ function setActive(){var bs=document.querySelectorAll('.fb');for(var i=0;i<bs.le
 function build(){
 slider.innerHTML='';cards=[];
 for(var i=0;i<questions.length;i++){
-var locked=(i>=FREE&&!prem);
+var locked=false;
 var c=document.createElement('div');c.className='card';c.style.zIndex=questions.length-i;
 var h;
 if(locked){h=flagsHTML+'<div class="pw"><div class="pt">Здесь ещё '+PAID+' вопросов</div><div class="pd">Купите полную версию, чтобы открыть все вопросы.</div><button class="pb" onclick="pay()">Оплатить '+PAID+' вопросов</button></div>';}
